@@ -438,7 +438,7 @@ dependencies = [
 
 [[package]]
 name = "enano-web-test"
-version = "0.4.1"
+version = "0.4.2"
 dependencies = [
  "actix-web",
  "env_logger",
