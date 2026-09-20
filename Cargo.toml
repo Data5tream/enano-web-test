@@ -1,5 +1,5 @@
 [package]
-name = "web-test-container"
+name = "enano-web-test"
 version = "0.4.1"
 edition = "2024"
 

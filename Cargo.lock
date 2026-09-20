@@ -437,6 +437,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "enano-web-test"
+version = "0.4.1"
+dependencies = [
+ "actix-web",
+ "env_logger",
+ "log",
+]
+
+[[package]]
 name = "encoding_rs"
 version = "0.8.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1382,15 +1391,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0562428422c63773dad2c345a1882263bbf4d65cf3f42e90921f787ef5ad58e7"
 dependencies = [
  "wit-bindgen",
-]
-
-[[package]]
-name = "web-test-container"
-version = "0.4.1"
-dependencies = [
- "actix-web",
- "env_logger",
- "log",
 ]
 
 [[package]]

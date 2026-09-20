@@ -2,34 +2,41 @@ name: Lint
 
 on:
   push:
-    branches:
-      - master
-    paths-ignore:
-      - Dockerfile
-      - '**.md'
-  pull_request:
-    branches:
-      - master
+    paths:
+      - 'src/**'
+      - 'Cargo.*'
 
 permissions:
   checks: write
 
 jobs:
-  run-backend-linter:
-    name: Run clippy
+  check-qa:
+    name: Run clippy & formatter
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install toolchain
         run: rustup show active-toolchain
 
-      - name: Build app
-        run: cargo build
+      - name: Check linting
+        run: cargo clippy
 
-      - name: Run clippy
-        uses: wearerequired/lint-action@master
-        with:
-          clippy: true
+      - name: Check formatting
+        run: cargo fmt --check
+
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v7
+
+      - name: Install toolchain
+        run: rustup show active-toolchain
+
+      - name: Run tests
+        run: cargo test

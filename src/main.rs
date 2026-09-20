@@ -4,7 +4,7 @@ use actix_web::{App, HttpResponse, HttpServer, Responder, get, middleware::Logge
 use log::info;
 
 static NAME: LazyLock<String> =
-    LazyLock::new(|| env::var("CONTAINER_NAME").unwrap_or("WebTestContainer".to_string()));
+    LazyLock::new(|| env::var("CONTAINER_NAME").unwrap_or("enano-web-test".to_string()));
 
 #[get("/")]
 async fn index() -> impl Responder {

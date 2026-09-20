@@ -1,5 +1,5 @@
-# web-test-container
-Minimal container for testing container orchestration and hosting setups
+# enano-web-test
+Minimal web service for testing networking software and setups
 
 ```shell
 docker pull ghcr.io/data5tream/web-test-container:latest
