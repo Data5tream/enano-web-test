@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.1](https://github.com/Data5tream/enano-web-test/compare/v0.5.0...v0.5.1) - 2026-09-21
+
+### <!-- 5 -->Miscellaneous Tasks
+
+- release v0.5.0
+
 ## [0.5.0](https://github.com/Data5tream/enano-web-test/compare/v0.4.2...v0.5.0) - 2026-09-21
 
 ### <!-- 0 -->Features
